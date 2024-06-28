@@ -1,7 +1,9 @@
 version: '3'
 services:
-  python-api:
-    image: mcr.microsoft.com/devcontainers/python:1-3.12-bookworm
+  python-app:
+    build:
+      context: .
+      dockerfile: .devcontainer/python-container/Dockerfile
     volumes:
       # Mount the root folder that contains .git
       - .:/workspace:cached
