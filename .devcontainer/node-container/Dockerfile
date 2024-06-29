@@ -1,4 +1,7 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:0-20
+FROM mcr.microsoft.com/devcontainers/javascript-node:1-18
+
+# Install latest pnpm
+RUN npm install -g pnpm
 
 WORKDIR /opt
 
@@ -8,6 +11,6 @@ RUN apt-get update && \
     curl pre-commit
 
 ENV HOST 0.0.0.0
-EXPOSE 3000
+EXPOSE 4321
 
 RUN git config --global --add safe.directory /workspace
