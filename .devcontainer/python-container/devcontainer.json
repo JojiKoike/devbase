@@ -23,10 +23,11 @@
         "seatonjiang.gitmoji-vscode",
         "matangover.mypy",
         "streetsidesoftware.code-spell-checker",
-        "donjayamanne.githistory"
+        "donjayamanne.githistory",
+        "tamasfe.even-better-toml"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "${workspaceFolder}/**/.venv/bin/python",
+        "python.defaultInterpreterPath": "${workspaceFolder}/python-src/.venv/bin/python",
         "python.venvFolders": ["**/.venv"],
         "[python]": {
           "editor.defaultFormatter": "charliermarsh.ruff",
@@ -36,6 +37,8 @@
           },
           "editor.formatOnSave": true
         },
+        "mypy.dmypyExecutable": "${workspaceFolder}/python-src/.venv/bin/mypy",
+        "mypy.runUsingActiveInterpreter": true,
         "files.insertFinalNewline": true,
         "files.trimTrailingWhitespace": true,
         "terminal.integrated.defaultProfile.linux": "zsh",
