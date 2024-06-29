@@ -21,7 +21,8 @@
         "seatonjiang.gitmoji-vscode",
         "streetsidesoftware.code-spell-checker",
         "donjayamanne.githistory",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "emeraldwalk.RunOnSave"
       ],
       "settings": {
         "files.insertFinalNewline": true,
@@ -31,8 +32,17 @@
           "zsh": {
             "path": "/bin/zsh"
           }
+        },
+        "emeraldwalk.runonsave": {
+          "commands": [
+            {
+            "match": "\\.proto$",
+            "cmd": "rm -rf gen | buf generate"
+            }
+          ]
         }
       }
     }
-  }
+  },
+  "postStartCommand": "cd /workspace/golang-src && air -c .air.toml"
 }
