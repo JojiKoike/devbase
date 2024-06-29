@@ -11,4 +11,11 @@ RUN go install github.com/go-delve/delve/cmd/dlv@latest
 RUN go install honnef.co/go/tools/cmd/staticcheck@latest
 RUN go install golang.org/x/tools/gopls@latest
 
+# For Protocol Buffer
+RUN go install github.com/bufbuild/buf/cmd/buf@latest
+RUN go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
+RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+RUN go install connectrpc.com/connect/cmd/protoc-gen-connect-go@latest
+
+RUN chown -R vscode:vscode /go
 RUN git config --global --add safe.directory /workspace
