@@ -20,11 +20,22 @@
         "streetsidesoftware.code-spell-checker",
         "donjayamanne.githistory",
         "tamasfe.even-better-toml",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
         "astro-build.astro-vscode"
       ],
       "settings": {
         "files.insertFinalNewline": true,
-        "files.trimTrailingWhitespace": true
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {},
+        "[json]": {
+          "editor.formatOnSave": false
+        }
       }
     }
   }
