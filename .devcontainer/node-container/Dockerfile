@@ -1,11 +1,11 @@
-FROM node:20.15.0-bookworm-slim as builder
+FROM mcr.microsoft.com/devcontainers/javascript-node:0-20
 
 WORKDIR /opt
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     ca-certificates \
-    curl git pre-commit openssl
+    curl pre-commit
 
 ENV HOST 0.0.0.0
 EXPOSE 3000
