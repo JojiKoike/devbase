@@ -3,5 +3,29 @@
   "dockerComposeFile": ["../../compose.yml"],
   "service": "node-app",
   "shutdownAction": "none",
-  "workspaceFolder": "/workspace"
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "mosapride.zenkaku",
+        "ms-azuretools.vscode-docker",
+        "oderwat.indent-rainbow",
+        "pkief.material-icon-theme",
+        "shardulm94.trailing-spaces",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one",
+        "seatonjiang.gitmoji-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "donjayamanne.githistory",
+        "tamasfe.even-better-toml",
+        "astro-build.astro-vscode"
+      ],
+      "settings": {
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true
+      }
+    }
+  }
 }
