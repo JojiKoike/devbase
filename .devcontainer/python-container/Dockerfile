@@ -25,3 +25,5 @@ ENV PYTHONUNBUFFERED True
 
 RUN rye config --set-bool behavior.global-python=true && \
     rye config --set-bool behavior.use-uv=true
+
+RUN git config --global --add safe.directory /workspace
