@@ -44,7 +44,7 @@ ignore = [
     "E111", "E114", "E117",
     "ISC001", "ISC002",
     "Q000", "Q001", "Q002", "Q003",
-    "W191",
+    "W191", "D104"
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
