@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/devcontainers/go:1-1.22-bookworm
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates \
-        curl
+        curl pre-commit
 
 RUN go install github.com/cweill/gotests/gotests@latest
 RUN go install github.com/josharian/impl@latest
