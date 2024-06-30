@@ -54,6 +54,19 @@ services:
       - 'redis-store:/data'
     command: redis-server --appendonly yes
 
+  mongodb:
+    build:
+      context: .
+      dockerfile: infra/mongodb/Dockerfile
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb-store:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
 volumes:
   pgdb-store:
   redis-store:
+  mongodb-store:
