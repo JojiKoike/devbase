@@ -10,7 +10,12 @@ RUN apt-get update && apt-get install -y \
     terraform \
     direnv \
 		pre-commit\
-	&& rm -rf /var/lib/apt/lists/*
+    curl \
+    golang-go \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+RUN go install github.com/aquasecurity/tfsec/cmd/tfsec@latest
 
 RUN echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 RUN git config --global --add safe.directory /workspace
