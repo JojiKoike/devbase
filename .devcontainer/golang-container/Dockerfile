@@ -16,6 +16,7 @@ RUN go install github.com/bufbuild/buf/cmd/buf@latest
 RUN go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 RUN go install connectrpc.com/connect/cmd/protoc-gen-connect-go@latest
+RUN go install github.com/envoyproxy/protoc-gen-validate@latest
 
 # Hot Reload
 RUN go install github.com/air-verse/air@latest
