@@ -32,6 +32,16 @@ services:
       - golang-app
     # ...
 
+  terraform-iac:
+    build:
+      context: .
+      dockerfile: .devcontainer/terraform-container/Dockerfile
+    volumes:
+      # Mount the root folder that contains .git
+      - .:/workspace:cached
+      - ./.devcontainer/terraform-container/direnv/config.toml:/root/.config/direnv/config.toml
+    command: sleep infinity
+
   postgres:
     build:
       context: .
