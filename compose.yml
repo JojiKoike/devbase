@@ -66,7 +66,22 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
 
+  minio:
+    build:
+      context: .
+      dockerfile: infra/minio/Dockerfile
+    command: ['server', '/data', '--console-address', ':9090']
+    ports:
+      - 9000:9000
+      - 9090:9090
+    volumes:
+      - minio-store:/data
+    environment:
+      MINIO_ROOT_USER: root
+      MINIO_ROOT_PASSWORD: password
+
 volumes:
   pgdb-store:
   redis-store:
   mongodb-store:
+  minio-store:
