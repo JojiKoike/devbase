@@ -6,3 +6,6 @@ plugins:
   - local: protoc-gen-connect-go
     out: gen
     opt: paths=source_relative
+  - remote: buf.build/bufbuild/validate-go
+    out: gen
+    opt: paths=source_relative
