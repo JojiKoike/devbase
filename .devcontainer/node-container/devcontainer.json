@@ -22,7 +22,8 @@
         "tamasfe.even-better-toml",
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
-        "astro-build.astro-vscode"
+        "astro-build.astro-vscode",
+        "sheltonlouis.astro-snippets"
       ],
       "settings": {
         "files.insertFinalNewline": true,
@@ -33,6 +34,10 @@
         "editor.formatOnPaste": true,
         "editor.formatOnType": true,
         "editor.codeActionsOnSave": {},
+        "prettier.documentSelectors": ["**/*.astro"],
+        "[astro]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
         "[json]": {
           "editor.formatOnSave": false
         }
