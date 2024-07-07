@@ -40,7 +40,8 @@
         },
         "[json]": {
           "editor.formatOnSave": false
-        }
+        },
+        "css.completion.completePropertyWithSemicolon": true
       }
     }
   }
