@@ -1,5 +1,5 @@
 {
-  "name": "violet-visual",
+  "name": "tutorial",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.3",
     "@astrojs/check": "^0.7.0",
-    "typescript": "^5.5.2"
+    "@astrojs/preact": "^3.5.0",
+    "@astrojs/rss": "^4.0.7",
+    "astro": "^4.11.3",
+    "preact": "^10.22.1",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0"
   }
 }
